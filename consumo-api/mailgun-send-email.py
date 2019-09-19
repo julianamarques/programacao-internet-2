@@ -6,18 +6,18 @@ def main():
     subject = input("Assunto: ")
     message = input("Mensagem: ")
 
-    print(send_email(destination, subject, message))
+    print(send_email(destination, subject, message).text)
 
 def send_email(destination, subject, message):
     return requests.post(
-        "https://api.mailgun.net/v3/sandbox6cdb7da5789f489395ea59059142d42f.mailgun.org/messages",
-        auth=("api", "d80e64f3c1ea6e909127e1ff36e5df0e-c27bf672-3b430069"),
+        "https://api.mailgun.net/v3/sandbox643ecff7351d4ddd9bce0a8ed2482a06.mailgun.org/messages",
+        auth=("api", "7d1e827b02e27fb9de45a18af53145ee-bbbc8336-d3501f8a"),
         data={
-            "from": "Mailgun Sandbox <postmaster@sandbox6cdb7da5789f489395ea59059142d42f.mailgun.org>",
-            "to": destination,
-            "subject": subject,
-            "text": message
-        }
+             "from": "Mailgun Sandbox <postmaster@sandbox643ecff7351d4ddd9bce0a8ed2482a06.mailgun.org>",
+             "to": destination,
+             "subject": subject,
+             "text": message
+         }
     )
 
 
