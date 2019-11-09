@@ -9,5 +9,4 @@ urlpatterns = [
     path('post-comments/', views.PostCommentsList.as_view(), name=views.ApiRoot.name),
     path('users/<int:id>', views.UserDetail.as_view(), name=views.UserDetail.name),
     path('posts/<int:id>', views.PostDetail.as_view(), name=views.PostDetail.name),
-    path('posts/<int:id_post>/comments/<int:id_comment>', views.PostCommentDetail.as_view(), name=views.PostCommentDetail.name),
 ]
